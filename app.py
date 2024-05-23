@@ -26,6 +26,7 @@ import asyncio
 from aiohttp import web
 # from async_lru import alru_cache #pip install async_lru
 from concurrent.futures import ThreadPoolExecutor
+import sys
 
 executor = ThreadPoolExecutor()
 
@@ -99,11 +100,11 @@ def create_app():
     return app
 
 
-def main():
+def main(port: int = 5000):
     app = create_app()
-    port = 5000
     web.run_app(app, port=port)
 
 
 if __name__ == '__main__':
-    main()
+    port = sys.argv[1] if len(sys.argv) > 1 else 5000
+    main(port=int(port))
