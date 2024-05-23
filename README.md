@@ -56,15 +56,12 @@ A simple asynchronous web service built with aiohttp to calculate the number of 
     curl http://localhost:5000/number?timeout=5
     ```
 
-## Configuration
-
-- The port on which the service listens can be configured in the `app.py` file.
-- You can adjust the maximum size of the cache in the `count_primes` function by modifying the `maxsize` parameter of the `@alru_cache` decorator.
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any improvements or bug fixes.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Acknowledgements
+* [aiohttp](https://docs.aiohttp.org/en/stable/index.html)
+* [Community](https://github.com/firdavsDev/Task_Award)
+* [Article](https://pythonist.ru/aiohttp-in-python/)
+* [Article](https://awstip.com/how-to-handle-a-million-requests-in-a-day-using-django-25eefaee8aad)
