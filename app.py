@@ -23,10 +23,12 @@ Example:
 
 
 import asyncio
-from aiohttp import web
-# from async_lru import alru_cache #pip install async_lru
 from concurrent.futures import ThreadPoolExecutor
 import sys
+from math import sqrt
+
+from aiohttp import web
+# from async_lru import alru_cache #pip install async_lru
 
 executor = ThreadPoolExecutor()
 
@@ -55,12 +57,18 @@ async def count_primes(v):
 
 
 def count_primes_sync(v):
+    """
+    Sieve of Eratosthenes 
+    
+    :param v: int
+    """
     sieve = [True] * (v + 1)
     sieve[0:2] = [False, False]
-    for start in range(2, int(v**0.5) + 1):
-        if sieve[start]:
-            sieve[start*start:v+1:start] = [False] * \
-                len(range(start*start, v + 1, start))
+    for i in range(2, int(sqrt(v)) + 1):
+        if sieve[i]:
+            for j in range(i * i, v + 1, i):
+                sieve[j] = False
+
     return sum(sieve)
 
 
