@@ -64,4 +64,3 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 * [aiohttp](https://docs.aiohttp.org/en/stable/index.html)
 * [Community](https://github.com/firdavsDev/Task_Award)
 * [Article](https://pythonist.ru/aiohttp-in-python/)
-* [Article](https://awstip.com/how-to-handle-a-million-requests-in-a-day-using-django-25eefaee8aad)
