@@ -15,7 +15,7 @@ A simple asynchronous web service built with aiohttp to calculate the number of 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/prime-number-calculator.git
+    git clone git@github.com:firdavsDev/is_prime_web_service.git
     ```
 
 2. Install dependencies:
